@@ -1,0 +1,168 @@
+/*some vars*/
+:root {
+    --bg: #d2f3da;
+    --card-bg: #ffffff;
+    --primary: #f5e9bd;
+    --secondary: #5c6bc0;
+    --text: #333333;
+    --accent: #04501e;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --gap: 1.5rem;
+    --color: rgb(43,72,51);
+  }
+
+  
+/*basic*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: var(--gap);
+    align-items: center;
+  
+  }
+  a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: var(--accent);
+  }
+
+ 
+
+  /* 4. Header */
+  header {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    background: var(--primary);
+    padding: cal(var(--gap));
+    color: rgb(43, 72, 51);
+    box-shadow: 0 4px 8px rgba(92, 92, 92, 1);
+  }
+  header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  /*card*/
+  section {
+    background: var(--card-bg);
+    margin-top: 1.5rem;
+    border-radius: 2rem;
+    padding: var(--gap);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  }
+  section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: 2px solid var(--accent);
+    padding-left: 0.5rem;
+  }
+   #link {
+    color: var(--color);
+  }
+  #link:hover{
+    color: white;
+  }
+
+  /*learn more: */
+  #learn ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    list-style: disc;
+  }
+  #learn li {
+    background: var(--primary);
+    padding: 5px;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 25px;
+  }
+  #learn li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba (0,0,0,0.1);
+  }
+  #skill ul {
+    font-size: 30px;
+    list-style: none;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+
+  }
+  #skill button {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--primary);
+    height: 4rem;
+    width: 8rem;
+    font-size: 1.2rem;
+    color: var(--color);
+    cursor: pointer;
+    font-family: var(--font-heading);
+    text-align: center;
+    list-style-type: disc;
+  }
+  #skill button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+
+  /* contact */
+  #contact h2{
+    margin-top: 1rem;
+  }
+  #contact p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  /* 8. Responsive Breakpoints */
+  @media (max-width: 768px) {       /* Tablet */ 
+    #skills li,
+    #projects li {
+      flex: 1 1 calc(50% - var(--gap));
+    }
+  }
+  @media (max-width: 480px) {       /* Mobile */ 
+    #skills li,
+    #projects li {
+      flex: 1 1 100%;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    section h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  
